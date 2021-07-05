@@ -26,8 +26,8 @@ export default class SaveRequestStack extends cdk.Stack {
             'request-handler',
             {
                 runtime: lambda.Runtime.NODEJS_14_X,
-                handler: 'app.lambda_handler',
-                functionName: 'insert-request',
+                handler: 'handler',
+                functionName: 'handler',
                 environment: {
                     "USERS": requestTable.tableName
                 },
